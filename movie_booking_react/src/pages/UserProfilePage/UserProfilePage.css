@@ -1,0 +1,8 @@
+.date-picker::-webkit-calendar-picker-indicator {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.date-picker{
+  text-transform: uppercase;
+}

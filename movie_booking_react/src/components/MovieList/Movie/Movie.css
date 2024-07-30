@@ -1,0 +1,182 @@
+.poster-img {
+    transition: transform 0.3s ease-in-out;
+    width: 100%;
+    max-height: 350px;
+}
+
+@media (max-width: 768px) {
+    .poster-img {
+        max-height: 600px;
+    }
+}
+
+.poster-img:hover {
+    transform: scale(1.05);
+}
+
+.poster {
+    overflow: hidden;
+}
+
+.rating-percent {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-right: 10px;
+}
+
+.rating img {
+    height: 25px;
+}
+
+.rating span {
+    padding: 5px;
+    font-weight: bold;
+    color: #dbe2fb;
+}
+
+.mov-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #0A1E5E;
+    background-clip: border-box;
+    border: none;
+    border-radius: 0.25rem;
+    overflow: hidden;
+}
+
+.mov-card:hover .poster-img {
+    transform: scale(1.05);
+}
+
+.mov-card > .card-body {
+    border: none;
+    background-color: #0A1E5E;
+}
+
+.mov-card a {
+    color: white;
+}
+
+.mov-card a:hover {
+    color: #31D7A9;
+    text-decoration: none;
+}
+
+.mov-card .card-title {
+    font-size: 19px;
+}
+
+.movie-list {
+    overflow: auto;
+    max-height: 700px;
+}
+
+/* Webkit (Chrome, Safari) */
+.movie-list::-webkit-scrollbar {
+    width: 12px;
+}
+
+.movie-list::-webkit-scrollbar-thumb {
+    background-color: #3498db;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.movie-list::-webkit-scrollbar-thumb:hover {
+    background-color: #2980b9;
+}
+
+/* Firefox */
+.movie-list::-moz-scrollbar {
+    width: 12px;
+}
+
+.movie-list::-moz-scrollbar-thumb {
+    background-color: #3498db;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.movie-list::-moz-scrollbar-thumb:hover {
+    background-color: #2980b9;
+}
+
+
+.filter-msg{
+    color: gold;
+    text-align: center;
+    font-size: 16px;
+    padding-bottom: 10px;
+}
+
+.error-msg{
+    color: red;
+    margin-top: -40px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.loading-api{
+    color: rgb(26, 97, 239);
+    width: 80px !important;
+    height: 80px !important;
+    position: absolute;
+    top: 35%;
+}
+
+.movie-header{
+    font-weight: bold;
+    color: white;
+}
+
+
+@media only screen and (max-width: 499.9px){
+    .error-msg{
+        margin-top: 170px;
+    }
+
+    .movie-header{
+        margin-top: 40px;
+    }
+}
+
+@media only screen and (max-width: 305.9px){
+    .error-msg{
+        margin-top: 200px;
+        font-size: 14px;
+    }
+}
+@media only screen and (max-width: 296px){
+    .error-msg{
+        margin-top: 240px;
+        font-size: 14px;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 991.9px) {
+    .mov-card .card-title{
+        font-size: 15px;
+        line-height: 22px;
+    }
+    .mov-card .card-body{
+        padding: 15px 11px;
+    }
+    .rating-percent{
+        font-size: 13px;
+    }
+    .rating img{
+        height: 19px;
+    }
+  }

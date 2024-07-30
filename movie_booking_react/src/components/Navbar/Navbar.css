@@ -1,0 +1,147 @@
+.header {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    background-color: #0A1E5E;
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.1);
+}
+
+.header.hidden {
+    transform: translateY(-100%);
+}
+
+.nav-links {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-left: 20px;
+    margin-right: auto;
+    width: 100%;
+}
+
+.navlink {
+    font-size: 18px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+.navlink:hover {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.join-btn {
+    padding: 8px 25px;
+    font-weight: 600;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    background: linear-gradient(0.25turn, #ff4a56, #3f4ffb);
+    transition: box-shadow .3s;
+}
+
+.user-icon{
+    color: whitesmoke;
+}
+
+.join-btn:hover {
+    text-decoration: none;
+    color: whitesmoke;
+    box-shadow: 0 5px 10px rgb(40, 57, 183);
+}
+
+.join-btn:disabled{
+    opacity: 0.5;
+    cursor: default;
+    box-shadow: none;
+}
+.admin-option{
+    flex-grow: 1;
+}
+
+@media only screen and (max-width: 575.98px) {
+
+    .nav-links {
+        padding: 0;
+        margin-top: 5px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .admin-option{
+        flex-grow: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .admin-option a{
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .navlink {
+        box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2);
+        font-size: 15px;
+        padding: 8px 16px;
+        margin-right: 16px;
+    }
+
+    .navlink:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .join-btn {
+        padding: 8px 16px;
+        font-size: 15px;
+    }
+}
+
+
+@media only screen and (max-width: 575.9px) {
+    .tickets-btn{
+        flex-grow: 1;
+        margin-right: 5px;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .tickets-btn{
+        flex-grow: 0;
+        /* margin-right: 0; */
+    }
+}
+
+@media only screen and (min-width: 297px) and (max-width: 355px) {
+    .hero-logo{
+        height: 32px;
+    }
+
+    .navbar-toggler{
+        padding: 3px 7px !important;
+    }
+
+    .navbar-toggler-icon{
+        width: 1.4em !important;
+        height: 1.4em !important;
+    }
+    .tickets-btn > button{
+        padding: 4px 7px;
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 270px) {
+
+    .nav-links{
+        border-top: 1px solid #0a34c1;
+        padding-top: 10px;
+    }
+    .navlink{
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+    .join-btn{
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+}

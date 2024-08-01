@@ -68,13 +68,6 @@ const Navbar = () => {
             <div className='navbar-brand'>
                 <Link title='Home' to="/"><img className='hero-logo' src={logo} alt="logo" /></Link>
             </div>
-            {
-                loginStatus ?
-                    <div className="tickets-btn">
-                        <button onClick={() => navigate('/tickets')} className="btn btn-outline-warning font-weight-bold">Tickets</button>
-                    </div>
-                    : <></>
-            }
             <button
                 className="navbar-toggler"
                 type="button" data-toggle="collapse"
@@ -87,24 +80,34 @@ const Navbar = () => {
             </button>
 
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                <div className="nav-links">
+                <div className="nav-links px-2">
                     {
                         loginStatus ? (
                             <>
-                                <div className='admin-option'>
-                                    {isAdmin && <Link className="navlink text-white mr-3" to="/add-movie">Add Movie</Link>}
+                                <div className="account-option">
+                                    <div className="tickets-btn">
+                                        <button onClick={() => navigate('/tickets')} className="btn btn-outline-warning py-1 px-2">Tickets</button>
+                                    </div>
+                                    : <></>
+                                    <div className='admin-option mr-auto'>
+                                        {isAdmin && <Link className="btn btn-outline-light py-1 px-2 " to="/add-movie">Add Movie</Link>}
+                                    </div>
                                 </div>
-                                <Link className="mr-3 text-white" to="/profile" title='Profile'>
-                                    <CgProfile size="38px" />
-                                </Link>
-                                <button className="join-btn d-flex align-center justify-content-center p-2" title='Logout' onClick={onLogoutHandler}>
-                                    <RiLogoutCircleRLine size="20px" />
-                                </button>
+
+                                <div className='account-btn-container'>
+
+                                    <Link className="mr-2 text-white" to="/profile" title='Profile'>
+                                        <CgProfile size="38px" />
+                                    </Link>
+                                    <button className="join-btn d-flex align-item-center p-2" title='Logout' onClick={onLogoutHandler}>
+                                        <RiLogoutCircleRLine size="20px" />
+                                    </button>
+                                </div>
                             </>
                         ) : (
                             <>
                                 <Link className="navlink mr-3 text-white" to="/login">Login</Link>
-                                <Link className="join-btn" to="/signup">Join Us</Link>
+                                <Link className="join-btn hide-us" to="/signup">Join <span>Us</span></Link>
                             </>
                         )
                     }
